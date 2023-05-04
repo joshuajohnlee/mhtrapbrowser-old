@@ -1,13 +1,27 @@
 import {useState} from "react";
 import weaponsList from '../assets/weapons.json';
 import WeaponCard from "./WeaponCard";
-const _ = require("lodash");
+import FilterForm from "./FilterForm";
+import FilterButton from "./FilterButton";
+import PageHeader from "./PageHeader";
+
+const lodash = require("lodash");
 
 export default function Weapons() {
-  
-  const [currentFilter, setCurrentFilter] = useState(
-    {
-      power_type: "Tactical",
+
+  // TO DO: name filter with regex?
+
+  // optional filters which aren't present if the users selects "all" or "any" as an option
+  // TO DO: form element should delete and add these as specified by form values
+  const [optionalFilters, setOptionalFilters] = useState({
+
+  })
+
+  // apply the optional filters (using lodash library)
+  let firstFilterList = lodash.filter(weaponsList, optionalFilters)
+
+  // mandatory filters that will always have a value of some sort
+  const [mandatoryFilters, setMandatoryFilters] = useState({
       min_power: 0,
       max_power: 7000,
       min_power_bonus: 0.1,
@@ -16,35 +30,66 @@ export default function Weapons() {
       max_attr_bonus: 1,
       min_luck: 0,
       max_luck: 500,
-      limited: true,
-    }
-  )
+      min_title_req: 0,
+      max_title_req: 15,
+      min_cheese_effect: 0,
+      max_cheese_effect: 12,
+    })
 
+  // Filter the first list further with the manatory filters (not lodash this time)
+  let secondFilterList = firstFilterList.filter(x =>
+    x.power >= mandatoryFilters.min_power &&
+    x.power <= mandatoryFilters.max_power &&
+    x.power_bonus >= mandatoryFilters.min_power_bonus &&
+    x.power_bonus <= mandatoryFilters.max_power_bonus &&
+    x.attr_bonus >= mandatoryFilters.min_attr_bonus &&
+    x.attr_bonus <= mandatoryFilters.max_attr_bonus &&
+    x.luck >= mandatoryFilters.min_luck &&
+    x.luck <= mandatoryFilters.max_luck &&
+    x.title_req >= mandatoryFilters.min_title_req &&
+    x.title_req <= mandatoryFilters.max_title_req &&
+    x.cheese_effect >= mandatoryFilters.min_cheese_effect &&
+    x.cheese_effect <= mandatoryFilters.max_cheese_effect 
+  );
+
+  
+  // create a sort (can take multiple columns)
+  // TO DO: find out how to change sort direction
   const [currentSort, setCurrentSort] = useState(["title_req"])
 
-  let filteredList = weaponsList.filter(x =>
-    x.power_type == currentFilter.power_type &&
-    x.power >= currentFilter.min_power &&
-    x.power <= currentFilter.max_power &&
-    x.power_bonus >= currentFilter.min_power_bonus &&
-    x.power_bonus <= currentFilter.max_power_bonus &&
-    x.attr_bonus >= currentFilter.min_attr_bonus &&
-    x.attr_bonus <= currentFilter.max_attr_bonus &&
-    x.luck >= currentFilter.min_luck &&
-    x.luck <= currentFilter.max_luck &&
-    x.limited == currentFilter.limited
-    );
+  let sortedAndFilteredList = lodash.sortBy(secondFilterList, currentSort);
 
-  let sortedAndFilteredList = _.sortBy(filteredList, currentSort);
+  // modal visibility state and toggle
+  const [modalVisibility, setModalVisibility] = useState(false);
+  function toggleModalVisibility() {
+    setModalVisibility(!modalVisibility);
+  };
 
+  // return the page
   return(
     <>
+
+      <PageHeader />
+      
+      <FilterButton 
+        clickHandler = {toggleModalVisibility}
+      />
+      
+      <FilterForm 
+        setOptionalFilters = {setOptionalFilters}
+        setMandatoryFilters = {setMandatoryFilters}
+        setCurrentSort = {setCurrentSort}
+        modal = {modalVisibility}
+      />
+
       <div className="card-container">
         {sortedAndFilteredList.map((weapon) => (
           <WeaponCard weapon={weapon}/>
         ))}
       </div>
+
     </>
+    
   );
 
 }

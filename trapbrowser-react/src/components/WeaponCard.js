@@ -1,5 +1,7 @@
 import dataList from '../assets/data.json';
 
+// Individual card component that displays a weapon's picture and stats
+
 export default function WeaponCard({weapon}) {
 
     let imglink = "./images/weapons/" + weapon.name + ".png";
@@ -8,7 +10,7 @@ export default function WeaponCard({weapon}) {
     let cheese_effect = (dataList.freshness[(weapon.cheese_effect + 6)]);
     let title_req = (dataList.title_req[weapon.title_req - 1]);
     let wiki_link = "https://mhwiki.hitgrab.com/wiki/index.php/" + weapon.name;
-    let limited
+    let limited;
     weapon.limited ? limited = "Yes" : limited = "No";
 
     return(
@@ -61,7 +63,7 @@ export default function WeaponCard({weapon}) {
                         <p>{limited}</p>
                     </div>
                 </div>
-                <a href={wiki_link} target="_blank"><button>Find on MHWiki</button></a>
+                <a href={wiki_link} target="_blank" rel="noreferrer"><button>Find on MHWiki</button></a>
                 </div>
 
             </>
