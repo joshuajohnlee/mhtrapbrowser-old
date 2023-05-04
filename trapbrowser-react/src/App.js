@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import './my.css';
+import './responsive.css';
 import 'react-bootstrap';
 import Weapons from './components/Weapons.js';
 

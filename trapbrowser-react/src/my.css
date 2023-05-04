@@ -108,26 +108,3 @@
 .form-other-controls select {
     width: 60%;
 }
-
-@media (max-width: 800px) {
-    .card-container {
-        flex-direction: column;
-    }
-    
-    .card {
-        max-width: 80%;
-        margin: 1rem auto 1 rem auto;
-    }
-
-    .modal-form {
-        width: 80%;
-    }
-
-    .form-other-controls{
-        display:block;
-    }
-
-    .form-other-controls * {
-        margin-bottom: 1vh;
-    }
-}
