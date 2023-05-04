@@ -7,7 +7,6 @@
 
 .card-container {
     display: flex;
-    flex-shrink: 0;
     flex: 1 1 1px;
     flex-wrap: wrap;
     gap: 1%;
@@ -15,7 +14,7 @@
 
 .card {
     display: inline;
-    max-width: 30%;
+    max-width: 40%;
     padding: 1rem;
     margin: 1rem auto 1rem auto;
     border-width: 0.1em;
@@ -38,7 +37,9 @@
 }
 
 .stats-value {
-    border-style:solid;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 0.1em;
     overflow-wrap: break-word;
     vertical-align: middle;
     margin: auto 0 auto 0;
@@ -56,39 +57,41 @@
     width: 30%;
     height: 2rem;
     border-radius: 30px;
-    background-color: rgb(151, 151, 201);
 }
 
 .filter-button {
     width: 80%;
-    height: 5vh;
+    min-height: 10vh;
     margin: 1vh auto 1vh auto;
     border-radius: 15px;
 }
 
 .modal-form {
     width: 60%;
-    margin: 1vh auto 1vh auto;
+    text-align: center;
+    background-color: white;
+    margin: 4vh auto auto auto;
     padding: 1rem;
     border-style: solid;
     border-radius: 10px;
 }
 
-.form-label{
-    display:block;
+.form-label {
+    display: block;
 }
 
 .form-buttons {
-    display:block;
+    display: block;
     margin-top: 2rem;
 }
 
 .form-buttons button {
     height: 5vh;
     margin: 1vw;
+    width: 20%;
 }
 
-.form-power-selection{
+.form-power-selection {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr;
 }
@@ -107,4 +110,17 @@
 
 .form-other-controls select {
     width: 60%;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
 }
