@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Traps from './components/Traps.js';
+import './my.css';
+import 'react-bootstrap';
+import Weapons from './components/Weapons.js';
 
 function App() {
   return (
     <div className="App">
-      <Traps />
+      <Weapons />
     </div>
   );
 }
