@@ -272,36 +272,36 @@ export default function FilterForm({ setFilters, filters }) {
 
                         <label className="form-label" htmlFor="min_cheese_effect">Lowest cheese effect</label>
                         <select name="min_cheese_effect" defaultValue={filters.min_cheese_effect} onChange={handleChange}>
-                            <option value="-6" selected="">Über Stale</option>
-                            <option value="-5">Ultimately Stale</option>
-                            <option value="-4">Insanely Stale</option>
-                            <option value="-3">Extremely Stale</option>
-                            <option value="-2">Very Stale</option>
-                            <option value="-1">Stale</option>
-                            <option value="0">No cheese effect</option>
-                            <option value="1">Fresh</option>
-                            <option value="2">Very Fresh</option>
-                            <option value="3">Extremely Fresh</option>
-                            <option value="4">Insanely Fresh</option>
-                            <option value="5">Ultimately Fresh</option>
-                            <option value="6">Über Fresh</option>
+                            <option value="0">Über Stale</option>
+                            <option value="1">Ultimately Stale</option>
+                            <option value="2">Insanely Stale</option>
+                            <option value="3">Extremely Stale</option>
+                            <option value="4">Very Stale</option>
+                            <option value="5">Stale</option>
+                            <option value="6">No cheese effect</option>
+                            <option value="7">Fresh</option>
+                            <option value="8">Very Fresh</option>
+                            <option value="9">Extremely Fresh</option>
+                            <option value="10">Insanely Fresh</option>
+                            <option value="11">Ultimately Fresh</option>
+                            <option value="12">Über Fresh</option>
                         </select>
 
                         <label className="form-label" htmlFor="max_cheese_effect">Highest cheese effect</label>
                         <select name="max_cheese_effect" defaultValue={filters.max_cheese_effect} onChange={handleChange}>
-                            <option value="-6" selected="">Über Stale</option>
-                            <option value="-5">Ultimately Stale</option>
-                            <option value="-4">Insanely Stale</option>
-                            <option value="-3">Extremely Stale</option>
-                            <option value="-2">Very Stale</option>
-                            <option value="-1">Stale</option>
-                            <option value="0">No cheese effect</option>
-                            <option value="1">Fresh</option>
-                            <option value="2">Very Fresh</option>
-                            <option value="3">Extremely Fresh</option>
-                            <option value="4">Insanely Fresh</option>
-                            <option value="5">Ultimately Fresh</option>
-                            <option value="6">Über Fresh</option>
+                            <option value="0">Über Stale</option>
+                            <option value="1">Ultimately Stale</option>
+                            <option value="2">Insanely Stale</option>
+                            <option value="3">Extremely Stale</option>
+                            <option value="4">Very Stale</option>
+                            <option value="5">Stale</option>
+                            <option value="6">No cheese effect</option>
+                            <option value="7">Fresh</option>
+                            <option value="8">Very Fresh</option>
+                            <option value="9">Extremely Fresh</option>
+                            <option value="10">Insanely Fresh</option>
+                            <option value="11">Ultimately Fresh</option>
+                            <option value="12">Über Fresh</option>
                         </select>
 
                         <label className="form-label" htmlFor="limited">Limited Edition?</label>

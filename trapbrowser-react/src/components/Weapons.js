@@ -30,8 +30,8 @@ export default function Weapons() {
     max_luck: 40,
     min_title_req: 0,
     max_title_req: 19,
-    min_cheese_effect: -6,
-    max_cheese_effect: 6,
+    min_cheese_effect: 0,
+    max_cheese_effect: 12,
     limited: 'any'
   }
 
@@ -59,11 +59,11 @@ export default function Weapons() {
       return false;
     }
 
-    if (x.title_req < filters.title_req || x.title > filters.title_req) {
+    if (x.title_req < filters.min_title_req || x.title > filters.max_title_req) {
       return false;
     }
 
-    if (x.cheese_effect < filters.cheese_effect || x.cheese_effect > filters.cheese_effect) {
+    if (x.cheese_effect < filters.min_cheese_effect || x.cheese_effect > filters.max_cheese_effect) {
       return false;
     }
 
@@ -74,11 +74,7 @@ export default function Weapons() {
     return true;
   });
 
-  // console.log('weaponList', weaponsList);
-  // console.log('filteredList', filteredList);
-
   // create a sort (can take multiple columns)
-  // TO DO: find out how to change sort direction
   const [currentSortField, setCurrentSortField] = useState(["power"])
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
@@ -90,7 +86,6 @@ export default function Weapons() {
       <FilterForm
         setFilters={setFilters}
         filters={filters}
-      // childSetSort={setCurrentSort}
       />
 
       <SortButton
