@@ -1,3 +1,4 @@
-trapbrowser-react/public/images/
-trapbrowser-react/public/images/weapons/
-trapbrowser-react/node_modules/.cache/*
+public/images/
+public/images/weapons/
+node_modules/.cache/*
+build/
