@@ -54,17 +54,46 @@ export default function FilterForm({ setFilters, filters }) {
 
     const handleCheckboxChange = (e) => {
         if (e.target.checked) {
-            setFilters({
-                ...filters, //eslint-disable-next-line
-                ['power_type']: [...filters.power_type, e.target.value]
+            setFilters({...filters,
+                "power_type": {...filters.power_type, [e.target.value]: true}
             });
         } else {
-            let newData = { ...filters };
-            const index = newData.power_type.indexOf(e.target.value);
-            newData.power_type.splice(index, 1);
-
-            setFilters(newData);
+            setFilters({...filters,
+                "power_type": {...filters.power_type, [e.target.value]: false}
+            });
         }
+    }
+
+    function selectAllPowerTypes() {
+        setFilters({...filters, power_type: {
+            "Arcane": true,
+            "Draconic": true,
+            "Forgotten": true,
+            "Hydro": true,
+            "Law": true,
+            "Parental": true,
+            "Physical": true,
+            "Rift": true,
+            "Shadow": true,
+            "Tactical": true,
+          }})
+          console.log(filters.power_type);
+    }
+
+    function selectNoPowerTypes() {
+        setFilters({...filters, power_type: {
+            "Arcane": false,
+            "Draconic": false,
+            "Forgotten": false,
+            "Hydro": false,
+            "Law": false,
+            "Parental": false,
+            "Physical": false,
+            "Rift": false,
+            "Shadow": false,
+            "Tactical": false,
+          }})
+          console.log(filters.power_type);
     }
 
     function openModal() {
@@ -101,38 +130,39 @@ export default function FilterForm({ setFilters, filters }) {
             >
                 <form id="filterForm">
 
-
-
                     <fieldset className="form-power-selection">
                         <legend>Power Type</legend>
-                        <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" onClick={handleCheckboxChange} />
+                        <button type="button" name="select-all-power-types" onClick={selectAllPowerTypes}>Select All</button>
+                        <button type= "button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button><br />
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={filters.power_type.Arcane} onClick={handleCheckboxChange}/>
                         <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={filters.power_type.Draconic} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" checked={filters.power_type.Forgotten} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" checked={filters.power_type.Hydro} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" checked={filters.power_type.Law} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-7">Law</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" checked={filters.power_type.Parental} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" checked={filters.power_type.Physical} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" checked={filters.power_type.Rift} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" checked={filters.power_type.Shadow} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" onClick={handleCheckboxChange} />
+                        <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" checked={filters.power_type.Tactical} onClick={handleCheckboxChange} />
                         <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
                     </fieldset>
 
@@ -218,26 +248,26 @@ export default function FilterForm({ setFilters, filters }) {
 
                         <label className="form-label" htmlFor="max_title_req">Highest title needed</label>
                         <select name="max_title_req" defaultValue={filters.max_title_req} onChange={handleChange}>
-                            <option value="19" selected="">Fabled</option>
-                            <option value="18">Sage</option>
-                            <option value="17">Elder</option>
-                            <option value="16">Viceroy</option>
-                            <option value="15">Archduke/Archduchess</option>
-                            <option value="14">Grand Duke/Duchess</option>
-                            <option value="13">Duke/Duchess</option>
-                            <option value="12">Count/Countess</option>
-                            <option value="11">Baron/Baroness</option>
-                            <option value="10">Lord/Lady</option>
-                            <option value="9">Knight</option>
-                            <option value="8">Hero</option>
-                            <option value="7">Legendary</option>
-                            <option value="6">Grandmaster</option>
-                            <option value="5">Master</option>
-                            <option value="4">Journeyman/Journeywomen</option>
-                            <option value="3">Initiate</option>
-                            <option value="2">Apprentice</option>
-                            <option value="1">Recruit</option>
                             <option value="0">Novice</option>
+                            <option value="1">Recruit</option>
+                            <option value="2">Apprentice</option>
+                            <option value="3">Initiate</option>
+                            <option value="4">Journeyman/Journeywomen</option>
+                            <option value="5">Master</option>
+                            <option value="6">Grandmaster</option>
+                            <option value="7">Legendary</option>
+                            <option value="8">Hero</option>
+                            <option value="9">Knight</option>
+                            <option value="10">Lord/Lady</option>
+                            <option value="11">Baron/Baroness</option>
+                            <option value="12">Count/Countess</option>
+                            <option value="13">Duke/Duchess</option>
+                            <option value="14">Grand Duke/Duchess</option>
+                            <option value="15">Archduke/Archduchess</option>
+                            <option value="16">Viceroy</option>
+                            <option value="17">Elder</option>
+                            <option value="18">Sage</option>
+                            <option value="19">Fabled</option>
                         </select>
 
                         <label className="form-label" htmlFor="min_cheese_effect">Lowest cheese effect</label>
@@ -259,19 +289,19 @@ export default function FilterForm({ setFilters, filters }) {
 
                         <label className="form-label" htmlFor="max_cheese_effect">Highest cheese effect</label>
                         <select name="max_cheese_effect" defaultValue={filters.max_cheese_effect} onChange={handleChange}>
-                            <option value="6" selected="">Über Fresh</option>
-                            <option value="5">Ultimately Fresh</option>
-                            <option value="4">Insanely Fresh</option>
-                            <option value="3">Extremely Fresh</option>
-                            <option value="2">Very Fresh</option>
-                            <option value="1">Fresh</option>
-                            <option value="0">No cheese effect</option>
-                            <option value="-1">Stale</option>
-                            <option value="-2">Very Stale</option>
-                            <option value="-3">Extremely Stale</option>
-                            <option value="-4">Insanely Stale</option>
+                            <option value="-6" selected="">Über Stale</option>
                             <option value="-5">Ultimately Stale</option>
-                            <option value="-6">Über Stale</option>
+                            <option value="-4">Insanely Stale</option>
+                            <option value="-3">Extremely Stale</option>
+                            <option value="-2">Very Stale</option>
+                            <option value="-1">Stale</option>
+                            <option value="0">No cheese effect</option>
+                            <option value="1">Fresh</option>
+                            <option value="2">Very Fresh</option>
+                            <option value="3">Extremely Fresh</option>
+                            <option value="4">Insanely Fresh</option>
+                            <option value="5">Ultimately Fresh</option>
+                            <option value="6">Über Fresh</option>
                         </select>
 
                         <label className="form-label" htmlFor="limited">Limited Edition?</label>

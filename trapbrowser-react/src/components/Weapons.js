@@ -3,13 +3,23 @@ import weaponsList from '../assets/weapons.json';
 import WeaponCard from "./WeaponCard";
 import FilterForm from "./FilterForm";
 import SortButton from "./SortButton";
-
-const lodash = require("lodash");
+import lodash from "lodash";
 
 export default function Weapons() {
 
-  const [filters, setFilters] = useState({
-    power_type: ["Arcane", "Draconic", "Forgotten", "Hydro", "Law", "Parental", "Physical", "Rift", "Shadow", "Tactical"],
+  const DEFAULT_FILTERS = {
+    power_type: {
+      "Arcane": false,
+      "Draconic": false,
+      "Forgotten": false,
+      "Hydro": false,
+      "Law": false,
+      "Parental": false,
+      "Physical": false,
+      "Rift": false,
+      "Shadow": false,
+      "Tactical": false,
+    },
     min_power: 0,
     max_power: 16500,
     min_power_bonus: 0,
@@ -23,12 +33,14 @@ export default function Weapons() {
     min_cheese_effect: -6,
     max_cheese_effect: 6,
     limited: 'any'
-  })
+  }
+
+  const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
   let filteredList = weaponsList.filter(x => {
 
-    if (filters.power_type && !filters.power_type.includes(x.power_type)) {
-      return false
+    if(filters.power_type[x.power_type] === false) {
+      return false;
     }
 
     if (x.power < filters.min_power || x.power > filters.max_power) {
@@ -62,8 +74,8 @@ export default function Weapons() {
     return true;
   });
 
-  console.log('weaponList', weaponsList);
-  console.log('filteredList', filteredList);
+  // console.log('weaponList', weaponsList);
+  // console.log('filteredList', filteredList);
 
   // create a sort (can take multiple columns)
   // TO DO: find out how to change sort direction
