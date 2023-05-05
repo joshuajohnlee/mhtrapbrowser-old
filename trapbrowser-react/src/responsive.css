@@ -20,3 +20,12 @@
         margin-bottom: 1vh;
     }
 }
+
+@media (pointer: coarse) {
+    .filter-button {
+        width: 80%;
+        min-height: 10vh;
+        margin: 1vh auto 1vh auto;
+        border-radius: 15px;
+    }
+}

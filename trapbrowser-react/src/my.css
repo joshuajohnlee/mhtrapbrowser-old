@@ -58,6 +58,7 @@
 }
 
 .stats-value {
+    text-transform: capitalize;
     border-style: solid;
     border-color: lightgray;
     border-width: 0.1em;
@@ -81,8 +82,8 @@
 }
 
 .filter-button {
-    width: 80%;
-    min-height: 10vh;
+    width: 50%;
+    min-height: 5vh;
     margin: 1vh auto 1vh auto;
     border-radius: 15px;
 }
@@ -95,6 +96,16 @@
     padding: 1rem;
     border-style: solid;
     border-radius: 10px;
+}
+
+.slider-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.power-type-buttons button {
+    width: 40%;
+    margin: 1vh;
 }
 
 .known-issues {

@@ -9,7 +9,7 @@
     "luck": 25,
     "cheese_effect": 2,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W002",
@@ -21,7 +21,7 @@
     "luck": 20,
     "cheese_effect": 70,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W003",
@@ -33,7 +33,7 @@
     "luck": 18,
     "cheese_effect": 2,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W004",
@@ -45,7 +45,7 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_req": 2,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W005",
@@ -57,7 +57,7 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W006",
@@ -69,7 +69,7 @@
     "luck": 23,
     "cheese_effect": 7,
     "title_req": 12,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W007",
@@ -81,7 +81,7 @@
     "luck": 35,
     "cheese_effect": 70,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W008",
@@ -93,7 +93,7 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W009",
@@ -105,7 +105,7 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W010",
@@ -117,7 +117,7 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_req": 14,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W011",
@@ -129,7 +129,7 @@
     "luck": 28,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W012",
@@ -141,7 +141,7 @@
     "luck": 22,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W013",
@@ -153,7 +153,7 @@
     "luck": 26,
     "cheese_effect": 9,
     "title_req": 14,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W014",
@@ -165,7 +165,7 @@
     "luck": 26,
     "cheese_effect": 7,
     "title_req": 14,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W015",
@@ -177,7 +177,7 @@
     "luck": 16,
     "cheese_effect": 70,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W016",
@@ -189,7 +189,7 @@
     "luck": 6,
     "cheese_effect": 2,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W017",
@@ -201,7 +201,7 @@
     "luck": 1,
     "cheese_effect": 9,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W018",
@@ -213,7 +213,7 @@
     "luck": 9,
     "cheese_effect": 8,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W019",
@@ -225,7 +225,7 @@
     "luck": 12,
     "cheese_effect": 3,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W020",
@@ -237,7 +237,7 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W021",
@@ -249,7 +249,7 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_req": 15,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W022",
@@ -261,7 +261,7 @@
     "luck": 12,
     "cheese_effect": 3,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W023",
@@ -273,7 +273,7 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_req": 15,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W024",
@@ -285,7 +285,7 @@
     "luck": 14,
     "cheese_effect": 5,
     "title_req": 15,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W025",
@@ -297,7 +297,7 @@
     "luck": 13,
     "cheese_effect": 5,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W026",
@@ -309,7 +309,7 @@
     "luck": 8,
     "cheese_effect": 6,
     "title_req": 10,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W027",
@@ -321,7 +321,7 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_req": 15,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W028",
@@ -333,7 +333,7 @@
     "luck": 10,
     "cheese_effect": 3,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W029",
@@ -345,7 +345,7 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_req": 9,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W030",
@@ -357,7 +357,7 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_req": 9,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W031",
@@ -369,7 +369,7 @@
     "luck": 21,
     "cheese_effect": 9,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W032",
@@ -381,7 +381,7 @@
     "luck": 8,
     "cheese_effect": 8,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W033",
@@ -393,7 +393,7 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_req": 12,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W034",
@@ -405,7 +405,7 @@
     "luck": 9,
     "cheese_effect": 4,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W035",
@@ -417,7 +417,7 @@
     "luck": 8,
     "cheese_effect": 7,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W036",
@@ -429,7 +429,7 @@
     "luck": 10,
     "cheese_effect": 9,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W037",
@@ -441,7 +441,7 @@
     "luck": 2,
     "cheese_effect": 7,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W038",
@@ -453,7 +453,7 @@
     "luck": 15,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W039",
@@ -465,7 +465,7 @@
     "luck": 11,
     "cheese_effect": 5,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W040",
@@ -477,7 +477,7 @@
     "luck": 7,
     "cheese_effect": 4,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W041",
@@ -489,7 +489,7 @@
     "luck": 1,
     "cheese_effect": 5,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W042",
@@ -501,7 +501,7 @@
     "luck": 8,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W043",
@@ -513,7 +513,7 @@
     "luck": 6,
     "cheese_effect": 6,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W044",
@@ -525,7 +525,7 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W045",
@@ -537,7 +537,7 @@
     "luck": 18,
     "cheese_effect": 9,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W046",
@@ -549,7 +549,7 @@
     "luck": 16,
     "cheese_effect": 4,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W047",
@@ -561,7 +561,7 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W048",
@@ -573,7 +573,7 @@
     "luck": 8,
     "cheese_effect": 4,
     "title_req": 9,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W049",
@@ -585,7 +585,7 @@
     "luck": 24,
     "cheese_effect": 7,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W050",
@@ -597,7 +597,7 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W051",
@@ -609,7 +609,7 @@
     "luck": 32,
     "cheese_effect": 9,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W052",
@@ -621,7 +621,7 @@
     "luck": 18,
     "cheese_effect": 70,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W053",
@@ -633,7 +633,7 @@
     "luck": 16,
     "cheese_effect": 9,
     "title_req": 6,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W054",
@@ -645,7 +645,7 @@
     "luck": 28,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W055",
@@ -657,7 +657,7 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W056",
@@ -669,7 +669,7 @@
     "luck": 1,
     "cheese_effect": 5,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W057",
@@ -681,7 +681,7 @@
     "luck": 10,
     "cheese_effect": 4,
     "title_req": 9,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W058",
@@ -693,7 +693,7 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_req": 10,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W059",
@@ -705,7 +705,7 @@
     "luck": 20,
     "cheese_effect": 9,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W060",
@@ -717,7 +717,7 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W061",
@@ -729,7 +729,7 @@
     "luck": 10,
     "cheese_effect": 5,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W062",
@@ -741,7 +741,7 @@
     "luck": 18,
     "cheese_effect": 4,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W063",
@@ -753,7 +753,7 @@
     "luck": 5,
     "cheese_effect": 5,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W064",
@@ -765,7 +765,7 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W065",
@@ -777,7 +777,7 @@
     "luck": 22,
     "cheese_effect": 7,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W066",
@@ -789,7 +789,7 @@
     "luck": 26,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W067",
@@ -801,7 +801,7 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W068",
@@ -813,7 +813,7 @@
     "luck": 27,
     "cheese_effect": 8,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W069",
@@ -825,7 +825,7 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_req": 4,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W070",
@@ -837,7 +837,7 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_req": 9,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W071",
@@ -849,7 +849,7 @@
     "luck": 30,
     "cheese_effect": 9,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W072",
@@ -861,7 +861,7 @@
     "luck": 13,
     "cheese_effect": 5,
     "title_req": 9,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W073",
@@ -873,7 +873,7 @@
     "luck": 14,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W074",
@@ -885,7 +885,7 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W075",
@@ -897,7 +897,7 @@
     "luck": 1,
     "cheese_effect": 72,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W076",
@@ -909,7 +909,7 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W077",
@@ -921,7 +921,7 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W078",
@@ -933,7 +933,7 @@
     "luck": 4,
     "cheese_effect": 7,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W079",
@@ -945,7 +945,7 @@
     "luck": 16,
     "cheese_effect": 5,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W080",
@@ -957,7 +957,7 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W081",
@@ -969,7 +969,7 @@
     "luck": 6,
     "cheese_effect": 8,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W082",
@@ -981,7 +981,7 @@
     "luck": 3,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W083",
@@ -993,7 +993,7 @@
     "luck": 8,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W084",
@@ -1005,7 +1005,7 @@
     "luck": 5,
     "cheese_effect": 9,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W085",
@@ -1017,7 +1017,7 @@
     "luck": 1,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W086",
@@ -1029,7 +1029,7 @@
     "luck": 2,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W087",
@@ -1041,7 +1041,7 @@
     "luck": 10,
     "cheese_effect": 5,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W088",
@@ -1053,7 +1053,7 @@
     "luck": 20,
     "cheese_effect": 3,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W089",
@@ -1065,7 +1065,7 @@
     "luck": 4,
     "cheese_effect": 9,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W090",
@@ -1077,7 +1077,7 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W091",
@@ -1089,7 +1089,7 @@
     "luck": 8,
     "cheese_effect": 72,
     "title_req": 4,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W092",
@@ -1101,7 +1101,7 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W093",
@@ -1113,7 +1113,7 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W094",
@@ -1125,7 +1125,7 @@
     "luck": 1,
     "cheese_effect": 6,
     "title_req": 1,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W095",
@@ -1137,7 +1137,7 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W096",
@@ -1149,7 +1149,7 @@
     "luck": 4,
     "cheese_effect": 9,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W097",
@@ -1161,7 +1161,7 @@
     "luck": 14,
     "cheese_effect": 4,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W098",
@@ -1173,7 +1173,7 @@
     "luck": 10,
     "cheese_effect": 5,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W099",
@@ -1185,7 +1185,7 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W100",
@@ -1197,7 +1197,7 @@
     "luck": 36,
     "cheese_effect": 9,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W101",
@@ -1209,7 +1209,7 @@
     "luck": 24,
     "cheese_effect": 8,
     "title_req": 4,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W102",
@@ -1221,7 +1221,7 @@
     "luck": 30,
     "cheese_effect": 4,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W103",
@@ -1233,7 +1233,7 @@
     "luck": 26,
     "cheese_effect": 2,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W104",
@@ -1245,7 +1245,7 @@
     "luck": 30,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W105",
@@ -1257,7 +1257,7 @@
     "luck": 20,
     "cheese_effect": 4,
     "title_req": 9,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W106",
@@ -1269,7 +1269,7 @@
     "luck": 27,
     "cheese_effect": 1,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W107",
@@ -1281,7 +1281,7 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W108",
@@ -1293,7 +1293,7 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W109",
@@ -1305,7 +1305,7 @@
     "luck": 20,
     "cheese_effect": 2,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W110",
@@ -1317,7 +1317,7 @@
     "luck": 5,
     "cheese_effect": 9,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W111",
@@ -1329,7 +1329,7 @@
     "luck": 4,
     "cheese_effect": 5,
     "title_req": 5,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W112",
@@ -1341,7 +1341,7 @@
     "luck": 32,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W113",
@@ -1353,7 +1353,7 @@
     "luck": 4,
     "cheese_effect": 5,
     "title_req": 5,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W114",
@@ -1365,7 +1365,7 @@
     "luck": 2,
     "cheese_effect": 6,
     "title_req": 1,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W115",
@@ -1377,7 +1377,7 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W116",
@@ -1389,7 +1389,7 @@
     "luck": 25,
     "cheese_effect": 72,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W117",
@@ -1401,7 +1401,7 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_req": 3,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W118",
@@ -1413,7 +1413,7 @@
     "luck": 8,
     "cheese_effect": 4,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W119",
@@ -1425,7 +1425,7 @@
     "luck": 7,
     "cheese_effect": 5,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W120",
@@ -1437,7 +1437,7 @@
     "luck": 25,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W121",
@@ -1449,7 +1449,7 @@
     "luck": 4,
     "cheese_effect": 5,
     "title_req": 5,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W122",
@@ -1461,7 +1461,7 @@
     "luck": 2,
     "cheese_effect": 6,
     "title_req": 1,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W123",
@@ -1473,7 +1473,7 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_req": 2,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W124",
@@ -1485,7 +1485,7 @@
     "luck": 3,
     "cheese_effect": 3,
     "title_req": 3,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W125",
@@ -1497,7 +1497,7 @@
     "luck": 1,
     "cheese_effect": 8,
     "title_req": 3,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W126",
@@ -1509,7 +1509,7 @@
     "luck": 23,
     "cheese_effect": 5,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W127",
@@ -1521,7 +1521,7 @@
     "luck": 12,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W128",
@@ -1533,7 +1533,7 @@
     "luck": 12,
     "cheese_effect": 5,
     "title_req": 7,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W129",
@@ -1545,7 +1545,7 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W130",
@@ -1557,7 +1557,7 @@
     "luck": 18,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W131",
@@ -1569,7 +1569,7 @@
     "luck": 8,
     "cheese_effect": 4,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W132",
@@ -1581,7 +1581,7 @@
     "luck": 22,
     "cheese_effect": 5,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W133",
@@ -1593,7 +1593,7 @@
     "luck": 27,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W134",
@@ -1605,7 +1605,7 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W135",
@@ -1617,7 +1617,7 @@
     "luck": 8,
     "cheese_effect": 7,
     "title_req": 1,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W136",
@@ -1629,7 +1629,7 @@
     "luck": 25,
     "cheese_effect": 4,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W137",
@@ -1641,7 +1641,7 @@
     "luck": 16,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W138",
@@ -1653,7 +1653,7 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_req": 4,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W139",
@@ -1665,7 +1665,7 @@
     "luck": 2,
     "cheese_effect": 5,
     "title_req": 1,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W140",
@@ -1677,7 +1677,7 @@
     "luck": 8,
     "cheese_effect": 6,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W141",
@@ -1689,7 +1689,7 @@
     "luck": 17,
     "cheese_effect": 6,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W142",
@@ -1701,7 +1701,7 @@
     "luck": 6,
     "cheese_effect": 5,
     "title_req": 10,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W143",
@@ -1713,7 +1713,7 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_req": 1,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W144",
@@ -1725,7 +1725,7 @@
     "luck": 1,
     "cheese_effect": 8,
     "title_req": 13,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W145",
@@ -1737,7 +1737,7 @@
     "luck": 10,
     "cheese_effect": 7,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W146",
@@ -1749,7 +1749,7 @@
     "luck": 4,
     "cheese_effect": 7,
     "title_req": 13,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W147",
@@ -1761,7 +1761,7 @@
     "luck": 13,
     "cheese_effect": 9,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W148",
@@ -1773,7 +1773,7 @@
     "luck": 1,
     "cheese_effect": 6,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W149",
@@ -1785,7 +1785,7 @@
     "luck": 2,
     "cheese_effect": 4,
     "title_req": 13,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W150",
@@ -1797,7 +1797,7 @@
     "luck": 1,
     "cheese_effect": 6,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W151",
@@ -1809,7 +1809,7 @@
     "luck": 3,
     "cheese_effect": 6,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W152",
@@ -1821,7 +1821,7 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_req": 15,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W153",
@@ -1833,7 +1833,7 @@
     "luck": 3,
     "cheese_effect": 8,
     "title_req": 13,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W154",
@@ -1845,7 +1845,7 @@
     "luck": 7,
     "cheese_effect": 6,
     "title_req": 15,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W155",
@@ -1857,7 +1857,7 @@
     "luck": 4,
     "cheese_effect": 7,
     "title_req": 13,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W156",
@@ -1869,7 +1869,7 @@
     "luck": 15,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W157",
@@ -1881,7 +1881,7 @@
     "luck": 1,
     "cheese_effect": 7,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W158",
@@ -1893,7 +1893,7 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W159",
@@ -1905,7 +1905,7 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W160",
@@ -1917,7 +1917,7 @@
     "luck": 6,
     "cheese_effect": 7,
     "title_req": 6,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W161",
@@ -1929,7 +1929,7 @@
     "luck": 12,
     "cheese_effect": 3,
     "title_req": 9,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W162",
@@ -1941,7 +1941,7 @@
     "luck": 15,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W163",
@@ -1953,7 +1953,7 @@
     "luck": 21,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W164",
@@ -1965,7 +1965,7 @@
     "luck": 6,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W165",
@@ -1977,7 +1977,7 @@
     "luck": 28,
     "cheese_effect": 6,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W166",
@@ -1989,7 +1989,7 @@
     "luck": 10,
     "cheese_effect": 9,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W167",
@@ -2001,7 +2001,7 @@
     "luck": 10,
     "cheese_effect": 9,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W168",
@@ -2013,7 +2013,7 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W169",
@@ -2025,7 +2025,7 @@
     "luck": 7,
     "cheese_effect": 3,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W170",
@@ -2037,7 +2037,7 @@
     "luck": 35,
     "cheese_effect": 4,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W171",
@@ -2049,7 +2049,7 @@
     "luck": 10,
     "cheese_effect": 4,
     "title_req": 9,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W172",
@@ -2061,7 +2061,7 @@
     "luck": 7,
     "cheese_effect": 4,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W173",
@@ -2073,7 +2073,7 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_req": 12,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W174",
@@ -2085,7 +2085,7 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W175",
@@ -2097,7 +2097,7 @@
     "luck": 13,
     "cheese_effect": 8,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W176",
@@ -2109,7 +2109,7 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_req": 12,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W177",
@@ -2121,7 +2121,7 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_req": 6,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W178",
@@ -2133,7 +2133,7 @@
     "luck": 16,
     "cheese_effect": 5,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W179",
@@ -2145,7 +2145,7 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W180",
@@ -2157,7 +2157,7 @@
     "luck": 1,
     "cheese_effect": 5,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W181",
@@ -2169,7 +2169,7 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_req": 6,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W182",
@@ -2181,7 +2181,7 @@
     "luck": 12,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W183",
@@ -2193,7 +2193,7 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_req": 14,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W184",
@@ -2205,7 +2205,7 @@
     "luck": 13,
     "cheese_effect": 6,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W185",
@@ -2217,7 +2217,7 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W186",
@@ -2229,7 +2229,7 @@
     "luck": 25,
     "cheese_effect": 4,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W187",
@@ -2241,7 +2241,7 @@
     "luck": 25,
     "cheese_effect": 3,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W188",
@@ -2253,7 +2253,7 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W189",
@@ -2265,7 +2265,7 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W190",
@@ -2277,7 +2277,7 @@
     "luck": 12,
     "cheese_effect": 8,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W191",
@@ -2289,7 +2289,7 @@
     "luck": 16,
     "cheese_effect": 9,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W192",
@@ -2301,7 +2301,7 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W193",
@@ -2313,7 +2313,7 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W194",
@@ -2325,7 +2325,7 @@
     "luck": 21,
     "cheese_effect": 9,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W195",
@@ -2337,7 +2337,7 @@
     "luck": 22,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W196",
@@ -2349,7 +2349,7 @@
     "luck": 8,
     "cheese_effect": 72,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W197",
@@ -2361,7 +2361,7 @@
     "luck": 30,
     "cheese_effect": 6,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W198",
@@ -2373,7 +2373,7 @@
     "luck": 23,
     "cheese_effect": 7,
     "title_req": 13,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W199",
@@ -2385,7 +2385,7 @@
     "luck": 16,
     "cheese_effect": 6,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W200",
@@ -2397,7 +2397,7 @@
     "luck": 14,
     "cheese_effect": 5,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W201",
@@ -2409,7 +2409,7 @@
     "luck": 8,
     "cheese_effect": 2,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W202",
@@ -2421,7 +2421,7 @@
     "luck": 1,
     "cheese_effect": 7,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W203",
@@ -2433,7 +2433,7 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W204",
@@ -2445,7 +2445,7 @@
     "luck": 12,
     "cheese_effect": 4,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W205",
@@ -2457,7 +2457,7 @@
     "luck": 25,
     "cheese_effect": 7,
     "title_req": 5,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W206",
@@ -2469,7 +2469,7 @@
     "luck": 15,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W207",
@@ -2481,7 +2481,7 @@
     "luck": 32,
     "cheese_effect": 4,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W208",
@@ -2493,7 +2493,7 @@
     "luck": 40,
     "cheese_effect": 2,
     "title_req": 16,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W209",
@@ -2505,7 +2505,7 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_req": 4,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W210",
@@ -2517,7 +2517,7 @@
     "luck": 25,
     "cheese_effect": 8,
     "title_req": 12,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W211",
@@ -2529,7 +2529,7 @@
     "luck": 1,
     "cheese_effect": 5,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W212",
@@ -2541,7 +2541,7 @@
     "luck": 14,
     "cheese_effect": 8,
     "title_req": 8,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W213",
@@ -2553,7 +2553,7 @@
     "luck": 20,
     "cheese_effect": 4,
     "title_req": 7,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W214",
@@ -2565,7 +2565,7 @@
     "luck": 5,
     "cheese_effect": 9,
     "title_req": 6,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W215",
@@ -2577,7 +2577,7 @@
     "luck": 22,
     "cheese_effect": 70,
     "title_req": 8,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W216",
@@ -2589,7 +2589,7 @@
     "luck": 17,
     "cheese_effect": 8,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W217",
@@ -2601,7 +2601,7 @@
     "luck": 7,
     "cheese_effect": 7,
     "title_req": 7,
-    "limited": false
+    "limited": "no"
   },
   {
     "ID": "W218",
@@ -2613,7 +2613,7 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_req": 11,
-    "limited": true
+    "limited": "yes"
   },
   {
     "ID": "W219",
@@ -2625,6 +2625,6 @@
     "luck": 12,
     "cheese_effect": 1,
     "title_req": 11,
-    "limited": false
+    "limited": "no"
   }
 ]

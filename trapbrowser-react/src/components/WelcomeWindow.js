@@ -47,9 +47,7 @@ export default function WelcomeWindow() {
                     <h2>Current known issues</h2>
                     <ul>
                         <li>The browser only lists weapons and not bases.</li>
-                        <li>Sorting by title requirement currently does not work.</li>
                         <li>Accessibility is not properly implemented.</li>
-                        <li>Filter reset button does not work.</li>
                     </ul>
                 </div>
             </ReactModal>

@@ -7,11 +7,9 @@ export default function WeaponCard({ weapon }) {
     let imglink = "/images/weapons/" + weapon.name + ".png";
     let weppowerbonus = (weapon.power_bonus * 100).toFixed(0) + "%";
     let attrbonus = (weapon.attr_bonus * 100).toFixed(0) + "%";
-    let cheese_effect = (dataList.freshness[(weapon.cheese_effect + 6)]);
+    let cheese_effect = (dataList.freshness[(weapon.cheese_effect)]);
     let title_req = (dataList.title_req[weapon.title_req - 1]);
     let wiki_link = "https://mhwiki.hitgrab.com/wiki/index.php/" + weapon.name;
-    let limited;
-    weapon.limited ? limited = "Yes" : limited = "No";
 
     return (
         <>
@@ -60,7 +58,7 @@ export default function WeaponCard({ weapon }) {
                         <p>Limited Edition</p>
                     </div>
                     <div className="stats-value" style={{"gridColumn": "3 / span 2"}}>
-                        <p>{limited}</p>
+                        <p>{weapon.limited}</p>
                     </div>
                 </div>
                 <a href={wiki_link} target="_blank" rel="noreferrer"><button>Find on MHWiki</button></a>

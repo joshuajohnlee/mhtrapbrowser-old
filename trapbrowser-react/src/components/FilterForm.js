@@ -1,7 +1,8 @@
 // Modal form component that users will set their filters.
+import { filter } from 'lodash';
 import { useState } from 'react';
 import ReactModal from 'react-modal';
-export default function FilterForm({ setFilters, filters }) {
+export default function FilterForm({ setFilters, filters , DEFAULTS}) {
 
     // modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
@@ -22,6 +23,8 @@ export default function FilterForm({ setFilters, filters }) {
     const handleChange = (e) => {
 
         setFilters({ ...filters, [e.target.name]: e.target.value });
+
+        console.log("Limited is set to " + filters.limited);
 
         if (Number(filters.min_power) > Number(filters.max_power)) {
             displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
@@ -106,10 +109,14 @@ export default function FilterForm({ setFilters, filters }) {
         document.body.style.overflow = 'unset';
     }
 
+    function resetAllFilters() {
+        setFilters(DEFAULTS);
+    }
+
     return (
         <>
             <button className="filter-button" onClick={openModal}>
-                Filter and Sort
+                Set Filters
             </button>
 
             <ReactModal
@@ -130,100 +137,95 @@ export default function FilterForm({ setFilters, filters }) {
             >
                 <form id="filterForm">
 
-                    <fieldset className="form-power-selection">
+                    <fieldset >
                         <legend>Power Type</legend>
-                        <button type="button" name="select-all-power-types" onClick={selectAllPowerTypes}>Select All</button>
-                        <button type= "button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button><br />
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={filters.power_type.Arcane} onClick={handleCheckboxChange}/>
-                        <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
+                        <div className="power-type-buttons">
+                            <button type="button" name="select-all-power-types" onClick={selectAllPowerTypes}>Select All</button>
+                            <button type= "button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button>
+                        </div>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={filters.power_type.Draconic} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
+                        <div className="form-power-selection">
+                            <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={filters.power_type.Arcane} onChange={handleCheckboxChange}/>
+                            <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" checked={filters.power_type.Forgotten} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={filters.power_type.Draconic} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" checked={filters.power_type.Hydro} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" checked={filters.power_type.Forgotten} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" checked={filters.power_type.Law} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-7">Law</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" checked={filters.power_type.Hydro} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" checked={filters.power_type.Parental} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" checked={filters.power_type.Law} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-7">Law</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" checked={filters.power_type.Physical} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" checked={filters.power_type.Parental} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" checked={filters.power_type.Rift} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" checked={filters.power_type.Physical} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" checked={filters.power_type.Shadow} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" checked={filters.power_type.Rift} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
 
-                        <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" checked={filters.power_type.Tactical} onClick={handleCheckboxChange} />
-                        <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
+                            <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" checked={filters.power_type.Shadow} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
+
+                            <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" checked={filters.power_type.Tactical} onChange={handleCheckboxChange} />
+                            <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
+                        </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset className="slider-container">
                         <legend>Power</legend>
                         <label className="form-label" htmlFor="min_power">Minimum power</label>
-                        <input
-                            className="form-range"
-                            type="range"
-                            name="min_power"
-                            id="min_power"
-                            min="0"
-                            max="16500"
-                            step="100"
-                            defaultValue={filters.min_power}
-                            onChange={handleChange}
-                        />
+                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="16500" step="100" value={filters.min_power} onChange={handleChange} />
                         <output id="min_power_value">{filters.min_power}</output>
 
                         <label className="form-label" htmlFor="max_power">Maximum power</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="16500" step="100" defaultValue={filters.max_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="16500" step="100" value={filters.max_power} onChange={handleChange} />
                         <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset className="slider-container">
                         <legend>Power Bonus</legend>
                         <label className="form-label" htmlFor="min_power_bonus">Minimum power bonus</label>
-                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max="35" step="1" defaultValue={filters.min_power_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max="35" step="1" value={filters.min_power_bonus} onChange={handleChange} />
                         <output id="min_power_bonus_value">{filters.min_power_bonus + "%"}</output>
 
                         <label className="form-label" htmlFor="max_power_bonus">Maximum power bonus</label>
-                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max="35" step="1" defaultValue={filters.max_power_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max="35" step="1" value={filters.max_power_bonus} onChange={handleChange} />
                         <output id="max_power_bonus_value">{filters.max_power_bonus + "%"}</output>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset className="slider-container">
                         <legend>Attraction Bonus</legend>
                         <label className="form-label" htmlFor="min_attr_bonus">Minimum attraction bonus</label>
-                        <input className="form-range" type="range" name="min_attr_bonus" min="0" max="40" step="1" defaultValue={filters.min_attr_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_attr_bonus" min="0" max="40" step="1" value={filters.min_attr_bonus} onChange={handleChange} />
                         <output id="min_attr_bonus_value">{filters.min_attr_bonus + "%"}</output>
 
                         <label className="form-label" htmlFor="max_attr_bonus">Maximum attraction bonus</label>
-                        <input className="form-range" type="range" name="max_attr_bonus" min="0" max="40" defaultValue={filters.max_attr_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_attr_bonus" min="0" max="40" value={filters.max_attr_bonus} onChange={handleChange} />
                         <output id="max_attr_bonus_value">{filters.max_attr_bonus + "%"}</output>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset className="slider-container">
                         <legend>Luck</legend>
 
                         <label className="form-label" htmlFor="min_luck">Minimum luck</label>
-                        <input className="form-range" type="range" name="min_luck" min="0" max="40" defaultValue={filters.min_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_luck" min="0" max="40" value={filters.min_luck} onChange={handleChange} />
                         <output id="min_luck_value">{filters.min_luck}</output>
 
                         <label className="form-label" htmlFor="max_luck">Maximum luck</label>
-                        <input className="form-range" type="range" name="max_luck" min="0" max="40" defaultValue={filters.max_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_luck" min="0" max="40" value={filters.max_luck} onChange={handleChange} />
                         <output id="max_luck_value">{filters.max_luck}</output>
                     </fieldset>
 
                     <div className="form-other-controls">
                         <label className="form-label" htmlFor="min_title_req">Lowest title needed</label>
-                        <select name="min_title_req" defaultValue={filters.min_title_req} onChange={handleChange}>
+                        <select name="min_title_req" value={filters.min_title_req} onChange={handleChange}>
                             <option value="0">Novice</option>
                             <option value="1">Recruit</option>
                             <option value="2">Apprentice</option>
@@ -247,7 +249,7 @@ export default function FilterForm({ setFilters, filters }) {
                         </select>
 
                         <label className="form-label" htmlFor="max_title_req">Highest title needed</label>
-                        <select name="max_title_req" defaultValue={filters.max_title_req} onChange={handleChange}>
+                        <select name="max_title_req" value={filters.max_title_req} onChange={handleChange}>
                             <option value="0">Novice</option>
                             <option value="1">Recruit</option>
                             <option value="2">Apprentice</option>
@@ -271,7 +273,7 @@ export default function FilterForm({ setFilters, filters }) {
                         </select>
 
                         <label className="form-label" htmlFor="min_cheese_effect">Lowest cheese effect</label>
-                        <select name="min_cheese_effect" defaultValue={filters.min_cheese_effect} onChange={handleChange}>
+                        <select name="min_cheese_effect" value={filters.min_cheese_effect} onChange={handleChange}>
                             <option value="0">Über Stale</option>
                             <option value="1">Ultimately Stale</option>
                             <option value="2">Insanely Stale</option>
@@ -288,7 +290,7 @@ export default function FilterForm({ setFilters, filters }) {
                         </select>
 
                         <label className="form-label" htmlFor="max_cheese_effect">Highest cheese effect</label>
-                        <select name="max_cheese_effect" defaultValue={filters.max_cheese_effect} onChange={handleChange}>
+                        <select name="max_cheese_effect" value={filters.max_cheese_effect} onChange={handleChange}>
                             <option value="0">Über Stale</option>
                             <option value="1">Ultimately Stale</option>
                             <option value="2">Insanely Stale</option>
@@ -305,10 +307,10 @@ export default function FilterForm({ setFilters, filters }) {
                         </select>
 
                         <label className="form-label" htmlFor="limited">Limited Edition?</label>
-                        <select name="limited" defaultValue={filters.limited} onChange={handleChange}>
+                        <select name="limited" value={filters.limited} onChange={handleChange}>
                             <option value="any">Any</option>
-                            <option value="1">Limited edition only</option>
-                            <option value="0">Not limited edition</option>
+                            <option value="no">Limited edition only</option>
+                            <option value="yes">Not limited edition</option>
                         </select>
 
                     </div>
@@ -317,7 +319,7 @@ export default function FilterForm({ setFilters, filters }) {
 
                     <div className="form-buttons">
                         <button type="button" onClick={closeModal}>Close</button>
-                        <button type="button">Reset Filters</button>
+                        <button type="button" onClick={resetAllFilters}>Reset Filters</button>
                     </div>
                 </form>
             </ReactModal>

@@ -9,16 +9,16 @@ export default function Weapons() {
 
   const DEFAULT_FILTERS = {
     power_type: {
-      "Arcane": false,
-      "Draconic": false,
-      "Forgotten": false,
-      "Hydro": false,
-      "Law": false,
-      "Parental": false,
-      "Physical": false,
-      "Rift": false,
-      "Shadow": false,
-      "Tactical": false,
+      "Arcane": true,
+      "Draconic": true,
+      "Forgotten": true,
+      "Hydro": true,
+      "Law": true,
+      "Parental": true,
+      "Physical": true,
+      "Rift": true,
+      "Shadow": true,
+      "Tactical": true,
     },
     min_power: 0,
     max_power: 16500,
@@ -86,6 +86,7 @@ export default function Weapons() {
       <FilterForm
         setFilters={setFilters}
         filters={filters}
+        DEFAULTS={DEFAULT_FILTERS}
       />
 
       <SortButton

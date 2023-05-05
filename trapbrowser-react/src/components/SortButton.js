@@ -43,12 +43,12 @@ export default function SortButton ({setCurrentSortField, setCurrentSortDirectio
                 break;
 
             case "title_asc":
-                setCurrentSortField("title")
+                setCurrentSortField("title_req")
                 setCurrentSortDirection("asc")
                 break;
 
             case "title_desc":
-                setCurrentSortField("title")
+                setCurrentSortField("title_req")
                 setCurrentSortDirection("desc")
                 break;
 
