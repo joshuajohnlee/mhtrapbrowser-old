@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mhtrapbrowser-builds/static/css/main.b802f0be.css",
+    "main.js": "/mhtrapbrowser-builds/static/js/main.bf42901d.js",
+    "static/js/787.84eb0371.chunk.js": "/mhtrapbrowser-builds/static/js/787.84eb0371.chunk.js",
+    "index.html": "/mhtrapbrowser-builds/index.html",
+    "main.b802f0be.css.map": "/mhtrapbrowser-builds/static/css/main.b802f0be.css.map",
+    "main.bf42901d.js.map": "/mhtrapbrowser-builds/static/js/main.bf42901d.js.map",
+    "787.84eb0371.chunk.js.map": "/mhtrapbrowser-builds/static/js/787.84eb0371.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b802f0be.css",
+    "static/js/main.bf42901d.js"
+  ]
+}
