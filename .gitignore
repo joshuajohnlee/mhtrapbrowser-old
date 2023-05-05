@@ -1,4 +1,2 @@
-public/images/
-public/images/weapons/
-node_modules/.cache/*
-build/
+/public/images/
+/node_modules/.cache/
