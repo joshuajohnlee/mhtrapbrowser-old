@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mhtrapbrowser-builds/static/css/main.086fab12.css",
-    "main.js": "/mhtrapbrowser-builds/static/js/main.79af5e81.js",
+    "main.css": "/mhtrapbrowser-builds/static/css/main.68623f4b.css",
+    "main.js": "/mhtrapbrowser-builds/static/js/main.bdcd23e9.js",
     "static/js/787.84eb0371.chunk.js": "/mhtrapbrowser-builds/static/js/787.84eb0371.chunk.js",
     "index.html": "/mhtrapbrowser-builds/index.html",
-    "main.086fab12.css.map": "/mhtrapbrowser-builds/static/css/main.086fab12.css.map",
-    "main.79af5e81.js.map": "/mhtrapbrowser-builds/static/js/main.79af5e81.js.map",
+    "main.68623f4b.css.map": "/mhtrapbrowser-builds/static/css/main.68623f4b.css.map",
+    "main.bdcd23e9.js.map": "/mhtrapbrowser-builds/static/js/main.bdcd23e9.js.map",
     "787.84eb0371.chunk.js.map": "/mhtrapbrowser-builds/static/js/787.84eb0371.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.086fab12.css",
-    "static/js/main.79af5e81.js"
+    "static/css/main.68623f4b.css",
+    "static/js/main.bdcd23e9.js"
   ]
 }
