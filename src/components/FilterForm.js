@@ -308,8 +308,8 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
                         <label className="form-label" htmlFor="limited">Limited Edition?</label>
                         <select name="limited" value={filters.limited} onChange={handleChange}>
                             <option value="any">Any</option>
-                            <option value="no">Limited edition only</option>
-                            <option value="yes">Not limited edition</option>
+                            <option value="yes">Limited edition only</option>
+                            <option value="no">Not limited edition</option>
                         </select>
 
                     </div>
