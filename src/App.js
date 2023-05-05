@@ -1,7 +1,6 @@
-import './App.css';
 import './my.css';
+import './App.css';
 import './responsive.css';
-import 'react-bootstrap';
 import Weapons from './components/Weapons.js';
 import PageHeader from './components/PageHeader';
 import WelcomeWindow from './components/WelcomeWindow';

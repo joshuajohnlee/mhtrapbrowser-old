@@ -35,12 +35,18 @@ export default function WelcomeWindow() {
                     <button onClick={clickHandler}>Close</button>
                     <h2>Welcome to the MouseHunt Trap Browser!</h2>
 
-                    <p>This tool can be used to filter and sort weapons from MouseHunt. Once you close this window, 
-                        press the Filter button to set your filters and then you will see your results. Above the
-                        results, set the sorting method you want.
+                    <p>
+                        This tool can be used to filter and sort weapons from <a href="https://mousehuntgame.com" target="_blank">MouseHunt</a>. 
+                        Once you close this window, press the <strong>Set Filter</strong> button to set your filters and  you will see the results. 
+                        Above the results, you can set your desired sorting method.
                     </p>
 
-                    <p>This tool is not endorsed by or affiliated with HitGrab Inc. All weapon and base illustrations
+                    <p>
+                        <strong>This tool is still in early development and may not function or appear as expected.</strong>
+                    </p>
+
+                    <p>
+                        This tool is not endorsed by or affiliated with HitGrab Inc. All weapon and base illustrations
                         are copyright of HitGrab Inc. and are used here to illustrate the given information only.
                     </p>
                     

@@ -1,9 +1,35 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+/* App Header Bar */
+
 .app-header {
     width: 100%;
-    height: auto;
+    text-align: left;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
     border-style: solid none solid none;
     background-color: #97bddb;
+    border-width: 1px;
+    margin-bottom: 2vh;
 }
+
+.app-header h1 {
+    display:block;
+}
+
+.nav-link {
+    height: auto;
+}
+
+/* Welcome Window Modal */
 
 .welcome-window {
     position: relative;
@@ -25,6 +51,8 @@
 .welcome-window li {
     margin-top: 1vh;
 }
+
+/* Weapon Card Component */
 
 .card-container {
     display: flex;
@@ -81,6 +109,8 @@
     border-radius: 30px;
 }
 
+/* Filter Component */
+
 .filter-button {
     width: 50%;
     min-height: 5vh;
@@ -106,25 +136,6 @@
 .power-type-buttons button {
     width: 40%;
     margin: 1vh;
-}
-
-.known-issues {
-    position: relative;
-    margin: 1vh auto 1vh auto;
-    width: 90%;
-    border-style: dashed;
-    border-color: yellow;
-}
-
-.known-issues p {
-    margin-left: 5vh;
-    text-align: left;
-}
-
-
-
-.known-issues-hidden {
-    display: none;
 }
 
 .warning-message {
@@ -182,6 +193,8 @@ fieldset {
 .form-other-controls select {
     width: 60%;
 }
+
+/* Model content overlay animation */
 
 .ReactModal__Overlay {
     opacity: 0;
