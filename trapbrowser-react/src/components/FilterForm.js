@@ -1,7 +1,7 @@
 // Modal form component that users will set their filters.
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactModal from 'react-modal';
-export default function FilterForm({childSetMandatory, childSetOptional, childSetSort}) {
+export default function FilterForm({ setFilters, filters }) {
 
     function formReset() {
         document.getElementById("filterForm").reset();
@@ -9,50 +9,95 @@ export default function FilterForm({childSetMandatory, childSetOptional, childSe
     // modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
 
+    const [warningMessage, setWarningMessage] = useState("Default warning message")
+    const [warningVisibility, setWarningVisibility] = useState("warning-message-inactive")
+
+    function displayWarning(message) {
+        setWarningMessage(message);
+        setWarningVisibility("warning-message")
+    }
+
+    function hideWarning() {
+        setWarningMessage("");
+        setWarningVisibility("warning-message-inactive")
+    }
+
+    const handleChange = (e) => {
+
+        setFilters({ ...filters, [e.target.name]: e.target.value });
+
+        if (filters.min_power > filters.max_power) {
+            displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
+            return (null)
+        } else {
+            hideWarning();
+
+        }
+
+        if (filters.min_power_bonus > filters.max_power_bonus) {
+            displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.")
+            return (null)
+        } else {
+            hideWarning();
+        }
+
+        if (filters.min_attr_bonus > filters.max_attr_bonus) {
+            displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.")
+            return (null)
+        } else {
+            hideWarning();
+        }
+        if (filters.min_luck > filters.max_luck) {
+            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be")
+            return (null)
+        } else {
+            hideWarning();
+        }
+        if (filters.min_title_req > filters.max_title_req) {
+            displayWarning("Your lowest title is higher than your highest title. Nothing will be shown.")
+            return (null)
+        } else {
+            hideWarning();
+        }
+        if (filters.min_cheese_effect > filters.max_cheese_effect) {
+            displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.")
+            return (null)
+        }
+
+        hideWarning();
+
+
+
+    }
+
+    const handleCheckboxChange = (e) => {
+        if (e.target.checked) {
+            setFilters({
+                ...filters,
+                ['power_type']: [...filters.power_type, e.target.value]
+            });
+        } else {
+            let newData = { ...filters };
+            const index = newData.power_type.indexOf(e.target.value);
+            newData.power_type.splice(index, 1);
+
+            setFilters(newData);
+        }
+    }
+
+    /* FOR DEBUGGING */
+    // useEffect(() => {
+    //     console.log(filters);
+    // }, [filters])
+
     function openModal() {
         setisModalOpen(true);
         document.body.style.overflow = 'hidden';
     }
 
-    function updateAll() {
-
+    function closeModal() {
         setisModalOpen(false)
         document.body.style.overflow = 'unset';
-
-        let min_power_value = document.getElementById('min_power').value;
-        let max_power_value = document.getElementById('max_power').value;
-        let min_power_bonus_value = document.getElementById('min_power_bonus').value / 100;
-
-        childSetMandatory({
-            min_power: {min_power_value},
-            max_power: {max_power_value},
-            min_power_bonus: {min_power_bonus_value},
-            max_power_bonus: 1,
-            min_attr_bonus: 0,
-            max_attr_bonus: 1,
-            min_luck: 0,
-            max_luck: 500,
-            min_title_req: 0,
-            max_title_req: 15,
-            min_cheese_effect: 0,
-            max_cheese_effect: 12,
-        })
-
-        console.log("setting to" + {
-            min_power: {min_power_value},
-            max_power: {max_power_value},
-            min_power_bonus: {min_power_bonus_value},
-            max_power_bonus: 1,
-            min_attr_bonus: 0,
-            max_attr_bonus: 1,
-            min_luck: 0,
-            max_luck: 500,
-            min_title_req: 0,
-            max_title_req: 15,
-            min_cheese_effect: 0,
-            max_cheese_effect: 12,
-        })
-
     }
 
     return (
@@ -79,68 +124,99 @@ export default function FilterForm({childSetMandatory, childSetOptional, childSe
             >
                 <form id="filterForm">
 
+
+
                     <fieldset className="form-power-selection">
                         <legend>Power Type</legend>
-                        <input className="form-check-input" type="checkbox" id="formCheck-1" /><label className="form-check-label" for="formCheck-1">Arcane</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-2" /><label className="form-check-label" for="formCheck-2">Draconic</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-9" /><label className="form-check-label" for="formCheck-9">Forgotten</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-8" /><label className="form-check-label" for="formCheck-8">Hydro</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-7" /><label className="form-check-label" for="formCheck-7">Law</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-6" /><label className="form-check-label" for="formCheck-6">Parental</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-5" /><label className="form-check-label" for="formCheck-5">Physical</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-4" /><label className="form-check-label" for="formCheck-4">Rift</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-3" /><label className="form-check-label" for="formCheck-3">Shadow</label>
-                        <input className="form-check-input" type="checkbox" id="formCheck-10" /><label className="form-check-label" for="formCheck-10">Tactical</label>
+                        <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-7">Law</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
+
+                        <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" onClick={handleCheckboxChange} />
+                        <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Power</legend>
-                        <label className="form-label" for="min_power">Minimum power</label>
-                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="20000" step="100" defaultValue="0" />
-                        <output id="min_power_value"></output>
+                        <label className="form-label" htmlFor="min_power">Minimum power</label>
+                        <input
+                            className="form-range"
+                            type="range"
+                            name="min_power"
+                            id="min_power"
+                            min="0"
+                            max="20000"
+                            step="100"
+                            defaultValue={filters.min_power}
+                            onChange={handleChange}
+                        />
+                        <output id="min_power_value">{filters.min_power}</output>
 
-                        <label className="form-label" for="max_power">Maximum power</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="20000" defaultValue="20000" />
-                        <output id="max_power_value"></output>
+                        <label className="form-label" htmlFor="max_power">Maximum power</label>
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="16500" step="100" defaultValue={filters.max_power} onChange={handleChange} />
+                        <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 
                     <fieldset>
                         <legend>Power Bonus</legend>
-                        <label className="form-label" for="min_power_bonus">Minimum power bonus</label>
-                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max="100" step="1" defaultValue="0" />
-                        <output id="min_power_bonus_value"></output>
+                        <label className="form-label" htmlFor="min_power_bonus">Minimum power bonus</label>
+                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max="35" step="1" defaultValue={filters.min_power_bonus} onChange={handleChange} />
+                        <output id="min_power_bonus_value">{filters.min_power_bonus + "%"}</output>
 
-                        <label className="form-label" for="min_power">Maximum power bonus</label>
-                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max="100" step="1" defaultValue="100" />
-                        <output id="max_power_bonus_value"></output>
+                        <label className="form-label" htmlFor="max_power_bonus">Maximum power bonus</label>
+                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max="35" step="1" defaultValue={filters.max_power_bonus} onChange={handleChange} />
+                        <output id="max_power_bonus_value">{filters.max_power_bonus + "%"}</output>
                     </fieldset>
 
                     <fieldset>
                         <legend>Attraction Bonus</legend>
-                        <label className="form-label" for="min_power">Minimum attraction bonus</label>
-                        <input className="form-range" type="range" name="min_attr_bonus" min="0" max="100" defaultValue="0" />
-                        <output id="min_power_value"></output>
+                        <label className="form-label" htmlFor="min_attr_bonus">Minimum attraction bonus</label>
+                        <input className="form-range" type="range" name="min_attr_bonus" min="0" max="40" step="1" defaultValue={filters.min_attr_bonus} onChange={handleChange} />
+                        <output id="min_attr_bonus_value">{filters.min_attr_bonus + "%"}</output>
 
-                        <label className="form-label" for="min_power">Maximum attraction bonus</label>
-                        <input className="form-range" type="range" name="max_attr_bonus" min="0" max="100" defaultValue="100" />
-                        <output id="min_power_value"></output>
+                        <label className="form-label" htmlFor="max_attr_bonus">Maximum attraction bonus</label>
+                        <input className="form-range" type="range" name="max_attr_bonus" min="0" max="40" defaultValue={filters.max_attr_bonus} onChange={handleChange} />
+                        <output id="max_attr_bonus_value">{filters.max_attr_bonus + "%"}</output>
                     </fieldset>
 
                     <fieldset>
                         <legend>Luck</legend>
 
-                        <label className="form-label" for="min_power">Minimum luck</label>
-                        <input className="form-range" type="range" name="min_luck" min="0" max="100" defaultValue="0" />
-                        <output id="min_power_value"></output>
+                        <label className="form-label" htmlFor="min_luck">Minimum luck</label>
+                        <input className="form-range" type="range" name="min_luck" min="0" max="40" defaultValue={filters.min_luck} onChange={handleChange} />
+                        <output id="min_luck_value">{filters.min_luck}</output>
 
-                        <label className="form-label" for="max_luck">Maximum luck</label>
-                        <input className="form-range" type="range" name="max_luck" min="0" max="100" defaultValue="100" />
-                        <output id="min_power_value"></output>
+                        <label className="form-label" htmlFor="max_luck">Maximum luck</label>
+                        <input className="form-range" type="range" name="max_luck" min="0" max="40" defaultValue={filters.max_luck} onChange={handleChange} />
+                        <output id="max_luck_value">{filters.max_luck}</output>
                     </fieldset>
 
                     <div className="form-other-controls">
-                        <label className="form-label" for="min_power">Lowest title needed</label>
-                        <select defaultValue={"0"}>
+                        <label className="form-label" htmlFor="min_title_req">Lowest title needed</label>
+                        <select name="min_title_req" defaultValue={filters.min_title_req} onChange={handleChange}>
                             <option value="0">Novice</option>
                             <option value="1">Recruit</option>
                             <option value="2">Apprentice</option>
@@ -163,8 +239,8 @@ export default function FilterForm({childSetMandatory, childSetOptional, childSe
                             <option value="19">Fabled</option>
                         </select>
 
-                        <label className="form-label" for="min_power">Highest title needed</label>
-                        <select>
+                        <label className="form-label" htmlFor="max_title_req">Highest title needed</label>
+                        <select name="max_title_req" defaultValue={filters.max_title_req} onChange={handleChange}>
                             <option value="19" selected="">Fabled</option>
                             <option value="18">Sage</option>
                             <option value="17">Elder</option>
@@ -187,8 +263,8 @@ export default function FilterForm({childSetMandatory, childSetOptional, childSe
                             <option value="0">Novice</option>
                         </select>
 
-                        <label className="form-label">Lowest cheese effect</label>
-                        <select>
+                        <label className="form-label" htmlFor="min_cheese_effect">Lowest cheese effect</label>
+                        <select name="min_cheese_effect" defaultValue={filters.min_cheese_effect} onChange={handleChange}>
                             <option value="-6" selected="">Über Stale</option>
                             <option value="-5">Ultimately Stale</option>
                             <option value="-4">Insanely Stale</option>
@@ -204,8 +280,8 @@ export default function FilterForm({childSetMandatory, childSetOptional, childSe
                             <option value="6">Über Fresh</option>
                         </select>
 
-                        <label className="form-label">Highest cheese effect</label>
-                        <select>
+                        <label className="form-label" htmlFor="max_cheese_effect">Highest cheese effect</label>
+                        <select name="max_cheese_effect" defaultValue={filters.max_cheese_effect} onChange={handleChange}>
                             <option value="6" selected="">Über Fresh</option>
                             <option value="5">Ultimately Fresh</option>
                             <option value="4">Insanely Fresh</option>
@@ -221,17 +297,19 @@ export default function FilterForm({childSetMandatory, childSetOptional, childSe
                             <option value="-6">Über Stale</option>
                         </select>
 
-                        <label className="form-label">Limited Edition?</label>
-                        <select>
-                            <option value="&quot;any&quot;" selected="">Any</option>
-                            <option value="true">Limited edition only</option>
-                            <option value="false">Not limited edition</option>
+                        <label className="form-label" htmlFor="limited">Limited Edition?</label>
+                        <select name="limited" defaultValue={filters.limited} onChange={handleChange}>
+                            <option value="any">Any</option>
+                            <option value="1">Limited edition only</option>
+                            <option value="0">Not limited edition</option>
                         </select>
 
                     </div>
 
+                    <div id="warning-message" className={warningVisibility}>{warningMessage}</div>
+
                     <div className="form-buttons">
-                        <button type="button" onClick={updateAll}>Apply</button>
+                        <button type="button" onClick={closeModal}>Close</button>
                         <button type="button" onClick={formReset}>Reset Filters</button>
                     </div>
                 </form>

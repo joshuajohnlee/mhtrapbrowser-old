@@ -5,6 +5,27 @@
     background-color: #97bddb;
 }
 
+.welcome-window {
+    position: relative;
+    margin: 5vh;
+    padding: 5vh;
+    background-color: white;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.welcome-window button {
+    position: absolute;
+    height: 3vh;
+    width: 8vh;
+    top: 1vh;
+    right: 1vh;
+}
+
+.welcome-window li {
+    margin-top: 1vh;
+}
+
 .card-container {
     display: flex;
     flex: 1 1 1px;
@@ -74,6 +95,40 @@
     padding: 1rem;
     border-style: solid;
     border-radius: 10px;
+}
+
+.known-issues {
+    position: relative;
+    margin: 1vh auto 1vh auto;
+    width: 90%;
+    border-style: dashed;
+    border-color: yellow;
+}
+
+.known-issues p {
+    margin-left: 5vh;
+    text-align: left;
+}
+
+
+
+.known-issues-hidden {
+    display: none;
+}
+
+.warning-message {
+    margin: 1vh auto 1vh auto;
+    width: 90%;
+    border-color: red;
+    color: white;
+    background-color: rgba(171, 62, 71, 50);
+    border-style: solid;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.warning-message-inactive {
+    display: none;
 }
 
 .form-label {

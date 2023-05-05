@@ -2,72 +2,88 @@ import { useState } from "react";
 import weaponsList from '../assets/weapons.json';
 import WeaponCard from "./WeaponCard";
 import FilterForm from "./FilterForm";
-import PageHeader from "./PageHeader";
+import SortButton from "./SortButton";
 
 const lodash = require("lodash");
 
 export default function Weapons() {
 
-  // TO DO: name filter with regex?
-
-  // optional filters which aren't present if the users selects "all" or "any" as an option
-  // TO DO: form element should delete and add these as specified by form values
-  const [optionalFilters, setOptionalFilters] = useState({
-    power_type: "Physical"
-  })
-
-  // apply the optional filters (using lodash library)
-  let firstFilterList = lodash.filter(weaponsList, optionalFilters)
-
-  // mandatory filters that will always have a value of some sort
-  const [mandatoryFilters, setMandatoryFilters] = useState({
+  const [filters, setFilters] = useState({
+    power_type: ["Arcane", "Draconic", "Forgotten", "Hydro", "Law", "Parental", "Physical", "Rift", "Shadow", "Tactical"],
     min_power: 0,
-    max_power: 7000,
-    min_power_bonus: 0.1,
-    max_power_bonus: 1,
+    max_power: 20000,
+    min_power_bonus: 0,
+    max_power_bonus: 35,
     min_attr_bonus: 0,
-    max_attr_bonus: 1,
+    max_attr_bonus: 40,
     min_luck: 0,
-    max_luck: 500,
+    max_luck: 40,
     min_title_req: 0,
-    max_title_req: 15,
-    min_cheese_effect: 0,
-    max_cheese_effect: 12,
+    max_title_req: 19,
+    min_cheese_effect: -6,
+    max_cheese_effect: 6,
+    limited: 'any'
   })
 
-  // Filter the first list further with the manatory filters (not lodash this time)
-  let secondFilterList = firstFilterList.filter(x =>
-    (x.power_type == mandatoryFilters.power_type || !x.power_type) &&
-    x.power >= mandatoryFilters.min_power &&
-    x.power <= mandatoryFilters.max_power &&
-    x.power_bonus >= mandatoryFilters.min_power_bonus &&
-    x.power_bonus <= mandatoryFilters.max_power_bonus &&
-    x.attr_bonus >= mandatoryFilters.min_attr_bonus &&
-    x.attr_bonus <= mandatoryFilters.max_attr_bonus &&
-    x.luck >= mandatoryFilters.min_luck &&
-    x.luck <= mandatoryFilters.max_luck &&
-    x.title_req >= mandatoryFilters.min_title_req &&
-    x.title_req <= mandatoryFilters.max_title_req &&
-    x.cheese_effect >= mandatoryFilters.min_cheese_effect &&
-    x.cheese_effect <= mandatoryFilters.max_cheese_effect
-  );
+  let filteredList = weaponsList.filter(x => {
+
+    if (filters.power_type && !filters.power_type.includes(x.power_type)) {
+      return false
+    }
+
+    if (x.power < filters.min_power || x.power > filters.max_power) {
+      return false;
+    }
+
+    if (x.power_bonus < (filters.min_power_bonus / 100) || x.power_bonus > (filters.max_power_bonus / 100)) {
+      return false;
+    }
+
+    if (x.attr_bonus < (filters.min_attr_bonus / 100) || x.attr_bonus > (filters.max_attr_bonus / 100)) {
+      return false;
+    }
+
+    if (x.luck < filters.min_luck || x.luck > filters.max_luck) {
+      return false;
+    }
+
+    if (x.title_req < filters.title_req || x.title > filters.title_req) {
+      return false;
+    }
+
+    if (x.cheese_effect < filters.cheese_effect || x.cheese_effect > filters.cheese_effect) {
+      return false;
+    }
+
+    if (filters.limited != 'any' && filters.limited != x.limited) {
+      return false;
+    }
+
+    return true;
+  });
+
+  console.log('weaponList', weaponsList);
+  console.log('filteredList', filteredList);
 
   // create a sort (can take multiple columns)
   // TO DO: find out how to change sort direction
-  const [currentSort, setCurrentSort] = useState(["title_req"])
+  const [currentSortField, setCurrentSortField] = useState(["power"])
+  const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
-  let sortedAndFilteredList = lodash.sortBy(secondFilterList, currentSort);
+  let sortedAndFilteredList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
   // return the page
   return (
     <>
-
-      <PageHeader />
-
       <FilterForm
-        childSetMandatory={setMandatoryFilters}
-        childSetOptional={setOptionalFilters}
-        childSetSort={setCurrentSort}
+        setFilters={setFilters}
+        filters={filters}
+      // childSetSort={setCurrentSort}
+      />
+
+      <SortButton
+        setCurrentSortDirection={setCurrentSortDirection}
+        setCurrentSortField={setCurrentSortField}
       />
 
       <div className="card-container">
