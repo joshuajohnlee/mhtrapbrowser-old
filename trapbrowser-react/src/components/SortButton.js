@@ -61,6 +61,11 @@ export default function SortButton ({setCurrentSortField, setCurrentSortDirectio
                 setCurrentSortField("cheese_effect")
                 setCurrentSortDirection("desc")
                 break;
+            
+            default:
+                setCurrentSortField("power")
+                setCurrentSortDirection("desc")
+                break;
         }    
     }
 
@@ -76,7 +81,7 @@ export default function SortButton ({setCurrentSortField, setCurrentSortDirectio
                 <option value="attr_bonus_asc">Attraction Bonus - Ascending</option>
                 <option value="attr_bonus_desc">Attraction Bonus - Descending</option>
                 <option value="luck_asc">Luck - Ascending</option>
-                <option value="luck_desc">Luck - Ascending</option>
+                <option value="luck_desc">Luck - Descending</option>
                 <option value="title_asc">Title Required - Ascending</option>
                 <option value="title_desc">Title Required - Descending</option>
                 <option value="cheese_effect_asc">Cheese Effect - Ascending</option>

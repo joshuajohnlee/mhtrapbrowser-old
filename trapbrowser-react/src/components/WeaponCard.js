@@ -4,9 +4,9 @@ import dataList from '../assets/data.json';
 
 export default function WeaponCard({ weapon }) {
 
-    let imglink = "./images/weapons/" + weapon.name + ".png";
-    let weppowerbonus = (weapon.power_bonus * 100) + "%";
-    let attrbonus = (weapon.attr_bonus * 100) + "%";
+    let imglink = "./public/images/weapons/" + weapon.name + ".png";
+    let weppowerbonus = (weapon.power_bonus * 100).toFixed(0) + "%";
+    let attrbonus = (weapon.attr_bonus * 100).toFixed(0) + "%";
     let cheese_effect = (dataList.freshness[(weapon.cheese_effect + 6)]);
     let title_req = (dataList.title_req[weapon.title_req - 1]);
     let wiki_link = "https://mhwiki.hitgrab.com/wiki/index.php/" + weapon.name;

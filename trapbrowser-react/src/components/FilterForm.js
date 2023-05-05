@@ -1,11 +1,8 @@
 // Modal form component that users will set their filters.
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ReactModal from 'react-modal';
 export default function FilterForm({ setFilters, filters }) {
 
-    function formReset() {
-        document.getElementById("filterForm").reset();
-    }
     // modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
 
@@ -26,54 +23,39 @@ export default function FilterForm({ setFilters, filters }) {
 
         setFilters({ ...filters, [e.target.name]: e.target.value });
 
-        if (filters.min_power > filters.max_power) {
+        if (Number(filters.min_power) > Number(filters.max_power)) {
             displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
             return (null)
-        } else {
-            hideWarning();
-
         }
-
-        if (filters.min_power_bonus > filters.max_power_bonus) {
+        if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
             displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.")
             return (null)
-        } else {
-            hideWarning();
         }
-
-        if (filters.min_attr_bonus > filters.max_attr_bonus) {
+        if (Number(filters.min_attr_bonus) > Number(filters.max_attr_bonus)) {
             displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.")
             return (null)
-        } else {
-            hideWarning();
         }
-        if (filters.min_luck > filters.max_luck) {
+        if (Number(filters.min_luck) > Number(filters.max_luck)) {
             displayWarning("Your minimum luck is set higher than your maximum. Nothing will be")
             return (null)
-        } else {
-            hideWarning();
         }
-        if (filters.min_title_req > filters.max_title_req) {
+        if (Number(filters.min_title_req) > Number(filters.max_title_req)) {
             displayWarning("Your lowest title is higher than your highest title. Nothing will be shown.")
             return (null)
-        } else {
-            hideWarning();
         }
-        if (filters.min_cheese_effect > filters.max_cheese_effect) {
+        if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
             displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.")
             return (null)
         }
 
         hideWarning();
 
-
-
     }
 
     const handleCheckboxChange = (e) => {
         if (e.target.checked) {
             setFilters({
-                ...filters,
+                ...filters, //eslint-disable-next-line
                 ['power_type']: [...filters.power_type, e.target.value]
             });
         } else {
@@ -84,11 +66,6 @@ export default function FilterForm({ setFilters, filters }) {
             setFilters(newData);
         }
     }
-
-    /* FOR DEBUGGING */
-    // useEffect(() => {
-    //     console.log(filters);
-    // }, [filters])
 
     function openModal() {
         setisModalOpen(true);
@@ -168,7 +145,7 @@ export default function FilterForm({ setFilters, filters }) {
                             name="min_power"
                             id="min_power"
                             min="0"
-                            max="20000"
+                            max="16500"
                             step="100"
                             defaultValue={filters.min_power}
                             onChange={handleChange}
@@ -310,7 +287,7 @@ export default function FilterForm({ setFilters, filters }) {
 
                     <div className="form-buttons">
                         <button type="button" onClick={closeModal}>Close</button>
-                        <button type="button" onClick={formReset}>Reset Filters</button>
+                        <button type="button">Reset Filters</button>
                     </div>
                 </form>
             </ReactModal>

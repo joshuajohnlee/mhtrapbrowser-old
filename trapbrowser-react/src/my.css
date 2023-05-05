@@ -125,6 +125,7 @@
     border-style: solid;
     border-radius: 15px;
     padding: 1rem;
+    word-wrap: break-word;
 }
 
 .warning-message-inactive {

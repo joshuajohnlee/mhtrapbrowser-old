@@ -1,22 +1,36 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import ReactModal from "react-modal";
 
 export default function WelcomeWindow() {
 
-    const [issueVisibility, setIssueVisibility] = useState(true)
-    
     document.body.style.overflow = 'hidden';
 
+    const [welcomeOpen, setWelcomeOpen] = useState(true)
+
     function clickHandler() {
-        setIssueVisibility(false);
-        document.body.style.overflow = 'unset';
+        setWelcomeOpen(false);
     }
+
+    useEffect(() => {
+        document.body.style.overflow = 'unset';
+    }, [welcomeOpen])
 
     return(
         <>
             <ReactModal
-            isOpen={issueVisibility}
-            className="welcome-window">
+            isOpen={welcomeOpen}
+            className="welcome-window"
+            preventScroll={false}
+            style={
+                {
+                    overlay: {
+                        background: "rgba(0, 0, 0, 0.5)",
+                        overflowY: "scroll"
+                    },
+                    content: {
+                    }
+                }
+            }>
                 <div className="welcome-content">
                     <button onClick={clickHandler}>Close</button>
                     <h2>Welcome to the MouseHunt Trap Browser!</h2>
@@ -26,7 +40,7 @@ export default function WelcomeWindow() {
                         results, set the sorting method you want.
                     </p>
 
-                    <p>This tool is not endorsed or affiliated with HitGrab Inc. All weapon and base illustrations
+                    <p>This tool is not endorsed by or affiliated with HitGrab Inc. All weapon and base illustrations
                         are copyright of HitGrab Inc. and are used here to illustrate the given information only.
                     </p>
                     
@@ -35,6 +49,7 @@ export default function WelcomeWindow() {
                         <li>The browser only lists weapons and not bases.</li>
                         <li>Sorting by title requirement currently does not work.</li>
                         <li>Accessibility is not properly implemented.</li>
+                        <li>Filter reset button does not work.</li>
                     </ul>
                 </div>
             </ReactModal>

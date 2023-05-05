@@ -11,7 +11,7 @@ export default function Weapons() {
   const [filters, setFilters] = useState({
     power_type: ["Arcane", "Draconic", "Forgotten", "Hydro", "Law", "Parental", "Physical", "Rift", "Shadow", "Tactical"],
     min_power: 0,
-    max_power: 20000,
+    max_power: 16500,
     min_power_bonus: 0,
     max_power_bonus: 35,
     min_attr_bonus: 0,
@@ -55,7 +55,7 @@ export default function Weapons() {
       return false;
     }
 
-    if (filters.limited != 'any' && filters.limited != x.limited) {
+    if (filters.limited !== 'any' && filters.limited !== x.limited) {
       return false;
     }
 
