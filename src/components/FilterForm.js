@@ -1,5 +1,4 @@
 // Modal form component that users will set their filters.
-import { filter } from 'lodash';
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 export default function FilterForm({ setFilters, filters , DEFAULTS}) {

@@ -565,7 +565,7 @@
   },
   {
     "ID": "W048",
-    "name": "Bubbles: The Party Crasher Trap",
+    "name": "Bubbles - The Party Crasher Trap",
     "power_type": "Hydro",
     "power": 5800,
     "power_bonus": 0.18,
@@ -721,7 +721,7 @@
   },
   {
     "ID": "W061",
-    "name": "Isle Idol Trap with Isle Idol Hydroplane Trap Skin",
+    "name": "Isle Idol Trap with Isle Idol Hydroplane Trap Skin",
     "power_type": "Hydro",
     "power": 3500,
     "power_bonus": 0.05,

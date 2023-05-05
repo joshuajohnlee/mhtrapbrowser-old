@@ -4,7 +4,7 @@ import dataList from '../assets/data.json';
 
 export default function WeaponCard({ weapon }) {
 
-    let imglink = "/images/weapons/" + weapon.name + ".png";
+    let imglink = process.env.PUBLIC_URL + "/images/weapons/" + weapon.name + ".png";
     let weppowerbonus = (weapon.power_bonus * 100).toFixed(0) + "%";
     let attrbonus = (weapon.attr_bonus * 100).toFixed(0) + "%";
     let cheese_effect = (dataList.freshness[(weapon.cheese_effect)]);
