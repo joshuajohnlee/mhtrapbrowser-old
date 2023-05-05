@@ -136,6 +136,10 @@
     display: block;
 }
 
+fieldset {
+    margin-top: 1vh;
+}
+
 .form-buttons {
     display: block;
     margin-top: 2rem;
