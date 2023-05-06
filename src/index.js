@@ -1,13 +1,36 @@
+//React Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './my.css';
-import App from './App';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//Component Imports
+import WeaponApp from './components/WeaponApp';
+import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
+import PageHeader from './components/PageHeader';
+import Help from './components/Help';
+// CSS Imports
+import './css/app.css';
+import './css/responsive.css';
+import './css/weaponapp.css';
+
+const Routing = () => {
+  return(
+    <BrowserRouter>
+      <PageHeader/>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="mhtrapbrowser" element={<Home />} />
+        <Route path="weapons" element={<WeaponApp />} />
+        <Route path="help" element={<Help />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <Routing />
   </React.StrictMode>
 );
 

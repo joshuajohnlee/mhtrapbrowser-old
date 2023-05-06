@@ -14,9 +14,16 @@ export default function WeaponCard({ weapon }) {
     return (
         <>
             <div className="card">
-                <img src={imglink} alt={weapon.name} />
-                <h4>{weapon.name}</h4>
-                <h6>{weapon.power_type}</h6>
+
+                <div className="trap-image">
+                    <img src={imglink} alt={weapon.name} />
+                </div>
+
+                <div class="weapon-name-container">
+                    <h4>{weapon.name}</h4>
+                    <h6>{weapon.power_type}</h6>
+                </div>
+
                 <div className="stats-container">
                     <div className="stats-header">
                         <p>Power</p>
@@ -61,7 +68,10 @@ export default function WeaponCard({ weapon }) {
                         <p>{weapon.limited}</p>
                     </div>
                 </div>
-                <a href={wiki_link} target="_blank" rel="noreferrer"><button>Find on MHWiki</button></a>
+
+                <a href={wiki_link} target="_blank" rel="noreferrer">
+                    <button className="wikibutton">Find on MHWiki</button>
+                </a>
             </div>
 
         </>

@@ -1,51 +1,22 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-/* App Header Bar */
-
-.app-header {
-    width: 100%;
-    text-align: left;
-    padding-left: 2rem;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    border-style: solid none solid none;
-    background-color: #97bddb;
-    border-width: 1px;
-    margin-bottom: 2vh;
-}
-
-.app-header h1 {
-    display:block;
-}
-
-.nav-link {
-    height: auto;
-}
-
 /* Welcome Window Modal */
 
 .welcome-window {
     position: relative;
+    top: 10vh;
     margin: 5vh;
     padding: 5vh;
-    background-color: white;
+    background-color: #11212D;
     border-style: solid;
     border-radius: 15px;
+    z-index: 5;
 }
 
 .welcome-window button {
     position: absolute;
     height: 3vh;
     width: 8vh;
-    top: 1vh;
-    right: 1vh;
+    top: 2vh;
+    right: 2vh;
 }
 
 .welcome-window li {
@@ -56,24 +27,39 @@ body {
 
 .card-container {
     display: flex;
-    flex: 1 1 1px;
     flex-wrap: wrap;
     gap: 1%;
+    padding: 1vw;
 }
 
 .card {
-    display: inline;
-    max-width: 40%;
+    display: flex;
+    max-width: 30%;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2F384B;
     padding: 1rem;
     margin: 1rem auto 1rem auto;
-    border-width: 0.1em;
-    border-style: solid;
-    border-radius: 30px;
+    border-radius: 15px;
 }
+
+.trap-image {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    height: 50%;
+    background-image: url("base.png");
+    background-size: contain;
+}
+
+.trap-image img {
+    width: 100%;
+    height: 100%;
+}
+
 
 .stats-container {
     display: grid;
-    row-gap: 1rem;
+    gap: 2vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     margin-bottom: 1rem;
@@ -87,45 +73,34 @@ body {
 
 .stats-value {
     text-transform: capitalize;
-    border-style: solid;
-    border-color: lightgray;
+    border-style: dotted none dotted none;
+    border-color: #89A2BE;
     border-width: 0.1em;
     overflow-wrap: break-word;
     vertical-align: middle;
     margin: auto 0 auto 0;
 }
 
-.card img {
-    border: 1px;
-    border-color: lightgray;
-    border-style: solid;
-    border-radius: 30px;
-    width: 60%;
-}
-
 .card button {
-    width: 30%;
-    height: 2rem;
-    border-radius: 30px;
+    padding: 1em;
+    height: 2em;
 }
 
-/* Filter Component */
-
-.filter-button {
-    width: 50%;
-    min-height: 5vh;
-    margin: 1vh auto 1vh auto;
-    border-radius: 15px;
-}
+/* Filter Modal Component */
 
 .modal-form {
     width: 60%;
+    z-index: 3;
     text-align: center;
-    background-color: white;
     margin: 4vh auto auto auto;
     padding: 1rem;
     border-style: solid;
     border-radius: 10px;
+    background-color: #0A141B;
+}
+
+.modal-form legend {
+    text-align: center;
 }
 
 .slider-container {
@@ -143,7 +118,7 @@ body {
     width: 90%;
     border-color: red;
     color: white;
-    background-color: rgba(171, 62, 71, 50);
+    background-color: #D95D39;
     border-style: solid;
     border-radius: 15px;
     padding: 1rem;
@@ -192,6 +167,31 @@ fieldset {
 
 .form-other-controls select {
     width: 60%;
+}
+
+/* Rilter and sort buttons */
+
+.filter-sort-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+}
+
+.filter-button {
+    width: 80%;
+    min-height: 5vh;
+}
+
+.sorter {
+    width: auto;
+}
+
+.sorter select {
+    background-color: #11212D;
+    color: white;
+    height: 5vh;
+    margin-left: 1vw;
+    text-align: center;
 }
 
 /* Model content overlay animation */

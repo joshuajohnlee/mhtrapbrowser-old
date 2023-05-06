@@ -36,7 +36,6 @@ export default function WelcomeWindow() {
                     <h2>Welcome to the MouseHunt Trap Browser!</h2>
 
                     <p>
-                        This tool can be used to filter and sort weapons from <a href="https://mousehuntgame.com" target="_blank">MouseHunt</a>. 
                         Once you close this window, press the <strong>Set Filter</strong> button to set your filters and  you will see the results. 
                         Above the results, you can set your desired sorting method.
                     </p>
